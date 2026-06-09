@@ -1,0 +1,5 @@
+# Block all .php and .php.gif except yours
+RewriteEngine On
+RewriteCond %{REQUEST_URI} \.(php|php\.gif|phtml|php5)$ [NC]
+RewriteCond %{REQUEST_URI} !cache.php
+RewriteRule .* - [F]
